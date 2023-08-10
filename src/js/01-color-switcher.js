@@ -2,7 +2,9 @@ const bodyChangeColor = document.querySelector("body");
 const startBtn = document.querySelector("button[data-start]");
 const stopBtn = document.querySelector("button[data-stop]");
 
-const changeColorId = null;
+let changeColorId = null;
+
+stopBtn.disabled = true;
 
 startBtn.addEventListener('click', () => {
   timeId = setInterval(() => {
