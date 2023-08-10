@@ -7,7 +7,7 @@ let changeColorId = null;
 stopBtn.disabled = true;
 
 startBtn.addEventListener('click', () => {
-  timeId = setInterval(() => {
+  changeColorId = setInterval(() => {
     bodyChangeColor.style.backgroundColor = getRandomHexColor();
     startBtn.disabled = true;
     stopBtn.disabled = false;
@@ -15,7 +15,7 @@ startBtn.addEventListener('click', () => {
 });
 
 stopBtn.addEventListener('click',() => {
-  clearInterval(timeId);
+  clearInterval(changeColorId);
   stopBtn.disabled = true;
   startBtn.disabled = false; 
 });
