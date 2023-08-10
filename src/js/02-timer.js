@@ -15,7 +15,9 @@ const min = document.querySelector("[data-minutes]");
 const sec = document.querySelector("[data-seconds]");
 
 
-const timerId = 0;
+let timerId = 0;
+
+btn.disabled = true;
 
 flatpickr(date, {
   enableTime: true,
